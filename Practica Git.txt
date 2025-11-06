@@ -14,26 +14,28 @@ cd Practice-1007
 ## Inicializar un repositorio
 git init
 
-## Crear un archivo (por ejemplo Practica Git.txt)
+## Crear un archivo
 echo "# Comandos Git" > "Practica Git.txt"
 
 ## Ver el estado del repositorio (rojo o verde)
 git status
 
-## Agregar el archivo al área de preparación (area de abordaje)
-git add Practica\ Git.txt
+## Agregar el archivo al área de preparación
+git add "Practica Git.txt"
 
 ## Guardar los cambios con un mensaje (primer commit)
 git commit -m "Primera versión"
 
-## Conectar el repositorio local con GitHub origin (alistar lugar de destino)
-git remote add origin https://github.com/JuanJainas/Practica 1007
+## Conectar el repositorio local con GitHub origin
+git remote add origin https://github.com/JuanJainas/Practice-1007.git
 
-##Verifique el destino
+## Verificar el destino
 git remote -v
 
 ## Subir los cambios al repositorio remoto
-git push -u origin master 
+git push -u origin master
+
+---
 
 # SEGUNDA VERSIÓN
 
@@ -50,3 +52,56 @@ git commit -m "Actualizo archivo con nuevos comandos"
 
 ## Subir cambios al repositorio remoto
 git push origin master
+
+## Eliminar un archivo del repositorio (si se necesita)
+git rm nombre_archivo
+git commit -m "Elimino archivo innecesario"
+git push origin master
+
+---
+
+# TERCERA VERSIÓN - COMANDOS GIT DOCUMENTADOS
+
+## CONFIGURACIÓN INICIAL
+git config --global user.name "JuanJainas"
+git config --global user.email "jjacerofl73@inemkennedy.edu.co"
+git config --list        # Ver la configuración actual
+
+## INICIALIZAR REPOSITORIO
+git init                 # Inicia un repositorio en la carpeta actual
+git clone <url>          # Clona un repositorio remoto existente
+
+## GESTIÓN DE ARCHIVOS
+git status               # Ver el estado de los archivos
+git add <archivo>        # Añadir archivo al área de preparación
+git commit -m "mensaje"  # Guardar los cambios
+git rm <archivo>         # Eliminar archivo del proyecto
+git mv <antiguo> <nuevo> # Renombrar o mover archivo
+
+## TRABAJO CON RAMAS
+git branch               # Listar ramas
+git branch <nombre>      # Crear nueva rama
+git checkout <rama>      # Cambiar de rama
+git merge <rama>         # Unir una rama con la actual
+git branch -d <rama>     # Eliminar rama local
+
+## REPOSITORIO REMOTO
+git remote add origin <url>  # Vincular repositorio local con remoto
+git remote -v                # Ver las conexiones remotas
+git push -u origin master    # Subir los cambios iniciales
+git push origin master       # Subir cambios posteriores
+git pull origin master       # Traer los cambios remotos
+
+## HISTORIAL Y REVISIÓN
+git log                  # Ver historial detallado
+git log --oneline        # Ver historial simplificado
+git show                 # Ver detalles de un commit
+git diff                 # Ver diferencias entre versiones
+
+## REVERTIR CAMBIOS
+git reset <archivo>       # Quitar archivo del área de preparación
+git checkout -- <archivo> # Revertir cambios locales no guardados
+git revert <id_commit>    # Crear un nuevo commit que deshace otro
+
+## CONSEJO FINAL
+# Usar 'git status' y 'git log' constantemente para mantener control del repositorio.
