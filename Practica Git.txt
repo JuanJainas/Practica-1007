@@ -27,10 +27,26 @@ git add Practica\ Git.txt
 git commit -m "Primera versión"
 
 ## Conectar el repositorio local con GitHub origin (alistar lugar de destino)
-git remote add origin https://github.com/JuanJainas/Practica--1007
+git remote add origin https://github.com/JuanJainas/Practica 1007
 
 ##Verifique el destino
 git remote -v
 
 ## Subir los cambios al repositorio remoto
-git push -u origin master jjacerofl73@inemkennedy.edu.co (Email) 
+git push -u origin master 
+
+# SEGUNDA VERSIÓN
+
+## Ver historial de commits
+git log
+git log --oneline
+
+## Mostrar cambios en archivos
+git show
+
+## Modificar un archivo y registrar los cambios
+git add "Practica Git.txt"
+git commit -m "Actualizo archivo con nuevos comandos"
+
+## Subir cambios al repositorio remoto
+git push origin master
