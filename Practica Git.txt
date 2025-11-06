@@ -1,0 +1,36 @@
+# COMANDOS GIT - PRIMERA VERSIÓN
+
+## Verificar versión de Git
+git --version
+
+## Configurar usuario global (solo la primera vez)
+git config --global user.name "JuanJainas"
+git config --global user.email "jjacerofl73@inemkennedy.edu.co"
+
+## Crear carpeta y entrar en ella
+mkdir Practice-1007
+cd Practice-1007
+
+## Inicializar un repositorio
+git init
+
+## Crear un archivo (por ejemplo Practica Git.txt)
+echo "# Comandos Git" > "Practica Git.txt"
+
+## Ver el estado del repositorio (rojo o verde)
+git status
+
+## Agregar el archivo al área de preparación (area de abordaje)
+git add Practica\ Git.txt
+
+## Guardar los cambios con un mensaje (primer commit)
+git commit -m "Primera versión"
+
+## Conectar el repositorio local con GitHub origin (alistar lugar de destino)
+git remote add origin https://github.com/JuanJainas/Practica--1007
+
+##Verifique el destino
+git remote -v
+
+## Subir los cambios al repositorio remoto
+git push -u origin master jjacerofl73@inemkennedy.edu.co (Email) 
